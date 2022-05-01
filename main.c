@@ -408,6 +408,10 @@ int main()
                 mana > 10 && sqrt(abs(base_x - players[0].posx) * abs(base_x - players[0].posx) + \
                 abs(base_y - players[0].posy) * abs(base_y - players[0].posy)) < 5000)
                 players[0].action = 2;
+            if (threat_count > 6 && monster_in_wind_range(players[1].posx, players[1].posy, entities, entity_count) == 1 && \
+                mana > 20 && sqrt(abs(base_x - players[1].posx) * abs(base_x - players[1].posx) + \
+                abs(base_y - players[1].posy) * abs(base_y - players[1].posy)) < 5000)
+                players[1].action = 2;
 
             for (int i = 0; i < 2; i++)
             {
